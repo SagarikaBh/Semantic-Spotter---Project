@@ -1,5 +1,5 @@
 # Semantic-Spotter---Project
-Semantic Spotter Project Submission
+
 ## 1. Background
 This project showcases how to build a Retrieval-Augmented Generation (RAG) system tailored to the insurance domain using LangChain.
 
