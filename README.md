@@ -50,6 +50,8 @@ Cross-Encoder Re-Ranking: Enhance semantic search results by re-ranking with a c
 Chains: Combine multiple components into cohesive workflows using LangChain’s chain functionality. For instance, a chain can format user input with a PromptTemplate and pass it to an LLM. More complex chains can be built by nesting or integrating with other components. This project uses the prompt rlm/rag-promp from LangChain Hub within a RAG chain.
 
 ## 6. System Architecture
+![](arch1.png)
+![](arch2.png)
 
 ## 7. Prerequisites
 - Python version 3.7 or higher
