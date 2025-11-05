@@ -7,7 +7,7 @@ This project showcases how to build a Retrieval-Augmented Generation (RAG) syste
 The objective is to develop a reliable generative search system that can accurately respond to queries based on a collection of insurance policy documents.
 
 ## 3. Document
-Access the policy documents here
+Access the policy documents here [here](./Policy+Documents)
 
 ## 4. Approach
 LangChain is a powerful framework designed to streamline the development of applications powered by large language models (LLMs). It offers a rich set of tools, components, and interfaces that simplify the creation of LLM-driven solutions. LangChain supports integration with major model providers like OpenAI, Cohere, and Hugging Face.
