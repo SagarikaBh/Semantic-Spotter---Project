@@ -17,37 +17,37 @@ Its modular and compositional architecture allows developers to build sophistica
 LangChain is model-agnostic and supports continuous iteration across various LLMs, making it ideal for building customizable and scalable applications.
 
 Key Elements of LangChain:
-Components: Modular abstractions for working with language models, with ready-to-use implementations. Usable independently or within the LangChain ecosystem.
+- **Components**: Modular abstractions for working with language models, with ready-to-use implementations. Usable independently or within the LangChain ecosystem.
 
-Use-Case Specific Chains: Pre-assembled configurations of components tailored to specific tasks. These chains offer a high-level interface and are easily customizable.
+- **Use-Case Specific Chains**: Pre-assembled configurations of components tailored to specific tasks. These chains offer a high-level interface and are easily customizable.
 
 Core Building Blocks:
-Model I/O: Interfaces for LLMs and chat models, including prompts and output parsers.
+* Model I/O: Interfaces for LLMs and chat models, including prompts and output parsers.
 
-Retrieval: Tools for accessing domain-specific data (e.g., document loaders, transformers, embedding models, vector stores, retrievers).
+* Retrieval: Tools for accessing domain-specific data (e.g., document loaders, transformers, embedding models, vector stores, retrievers).
 
-Chains: Sequences of LLM calls for structured workflows.
+* Chains: Sequences of LLM calls for structured workflows.
 
-Memory: Mechanisms to persist state across chain executions.
+* Memory: Mechanisms to persist state across chain executions.
 
-Agents: Allow chains to select tools dynamically based on directives.
+* Agents: Allow chains to select tools dynamically based on directives.
 
-Callbacks: Enable logging and streaming of intermediate steps.
+* Callbacks: Enable logging and streaming of intermediate steps.
 
 ## 5. System Layers
-PDF Reading & Processing: Utilize LangChain’s PyPDFDirectoryLoader to ingest and process PDFs from a specified directory.
+- **PDF Reading & Processing**: Utilize LangChain’s PyPDFDirectoryLoader to ingest and process PDFs from a specified directory.
 
-Document Chunking: Apply the RecursiveCharacterTextSplitter to segment text. This splitter prioritizes semantic coherence by splitting on characters like "\n\n", "\n", " ", and "", preserving paragraph and sentence integrity.
+- **Document Chunking**: Apply the RecursiveCharacterTextSplitter to segment text. This splitter prioritizes semantic coherence by splitting on characters like "\n\n", "\n", " ", and "", preserving paragraph and sentence integrity.
 
-Embedding Generation: Use OpenAIEmbeddings to convert text into vector representations. LangChain supports multiple embedding providers, enabling operations like similarity search and sentiment analysis. The base class includes methods for embedding both documents and queries.
+- **Embedding Generation**: Use OpenAIEmbeddings to convert text into vector representations. LangChain supports multiple embedding providers, enabling operations like similarity search and sentiment analysis. The base class includes methods for embedding both documents and queries.
 
-Embedding Storage in ChromaDB: Store embeddings using LangChain’s CacheBackedEmbeddings with ChromaDB as the backend.
+- **Embedding Storage in ChromaDB**: Store embeddings using LangChain’s CacheBackedEmbeddings with ChromaDB as the backend.
 
-Retrievers: Implement retrievers to fetch documents based on unstructured queries. Unlike vector stores, retrievers focus solely on returning relevant documents. The VectorStoreRetriever is widely supported and commonly used.
+- **Retrievers**: Implement retrievers to fetch documents based on unstructured queries. Unlike vector stores, retrievers focus solely on returning relevant documents. The VectorStoreRetriever is widely supported and commonly used.
 
-Cross-Encoder Re-Ranking: Enhance semantic search results by re-ranking with a cross-encoder. Each query-response pair is scored for relevance using HuggingFaceCrossEncoder with the model BAAI/bge-reranker-base.
+- **Cross-Encoder Re-Ranking**: Enhance semantic search results by re-ranking with a cross-encoder. Each query-response pair is scored for relevance using HuggingFaceCrossEncoder with the model BAAI/bge-reranker-base.
 
-Chains: Combine multiple components into cohesive workflows using LangChain’s chain functionality. For instance, a chain can format user input with a PromptTemplate and pass it to an LLM. More complex chains can be built by nesting or integrating with other components. This project uses the prompt rlm/rag-promp from LangChain Hub within a RAG chain.
+- **Chains**: Combine multiple components into cohesive workflows using LangChain’s chain functionality. For instance, a chain can format user input with a PromptTemplate and pass it to an LLM. More complex chains can be built by nesting or integrating with other components. This project uses the prompt rlm/rag-promp from LangChain Hub within a RAG chain.
 
 ## 6. System Architecture
 ![](arch1.png)
