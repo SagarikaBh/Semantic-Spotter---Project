@@ -64,5 +64,5 @@ Chains: Combine multiple components into cohesive workflows using LangChain’s 
 - Clone the GitHub repository:
 
  bash
-git clone https://github.com/SanjayaKumarSahoo/semantic-spotter-project.git
+git clone https://github.com/SagarikaBh/Semantic-Spotter---Project.git
 - Open the Jupyter notebook and execute all cells sequentially.
